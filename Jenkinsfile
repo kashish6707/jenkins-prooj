@@ -1,19 +1,16 @@
 pipeline {
-    // environment {
-    //     AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
-    //     AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
-    // }
-
-   agent  any
+    agent any
     stages {
         stage('checkout') {
             steps {
-                 script{
-                            git "https://github.com/kashish6707/jenkins-prooj.git"
-                        
-                    }
-                }
-            }  
-    }
+                git branch: 'main', url: 'https://github.com/kashish6707/jenkins-prooj.git'
+            }
+        }
 
-  }
+        stage('hello') {
+            steps {
+                sh 'echo Hello from Jenkins pipeline!'
+            }
+        }
+    }
+}
