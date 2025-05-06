@@ -1,8 +1,8 @@
-pipeline {
-    agent any
-    stages {
+pipeline{
+    stages{
+        agent any
         stage("message"){
-            steps {
+            steps{
                sh '''
                echo "Hello Kashish"
                '''
