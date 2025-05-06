@@ -1,0 +1,3 @@
+[submodule "app/app/netflix-clone-using-react"]
+	path = app/app/netflix-clone-using-react
+	url = https://github.com/sidmulajkar/netflix-clone-using-react.git
